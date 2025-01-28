@@ -1,0 +1,82 @@
+
+# Compiled binary files
+/bin/
+/obj/
+
+# User-specific files
+*.user
+*.userosscache
+*.suo
+*.ntvs*
+*.njsproj
+*.sln.docstates
+
+# ASP.NET temporary files
+/App_Data/
+
+# DotNet specific files
+*.dotnet_tool*
+
+# Log files
+*.log
+
+# Local database files
+*.mdf
+*.ldf
+
+# Visual Studio Code files
+.vscode/
+.vscode/*
+
+# Rider files
+.idea/
+*.sln.iml
+
+# Dependency folders
+node_modules/
+packages/
+
+# NuGet Packages
+*.nupkg
+*.snupkg
+.nuget/
+
+# DotNet build artifacts
+project.lock.json
+project.fragment.lock.json
+
+# StyleCop
+StyleCopCache.xml
+
+# User secrets
+secrets.json
+
+# IIS settings
+*.vs/
+
+# Docker files
+.docker/
+docker-compose.override.yml
+
+# JetBrains Rider
+.idea/
+*.sln.iml
+
+# Resharper
+_ReSharper*
+/resharper.log
+
+# Coverage
+coverage*
+
+# Build directories
+artifacts/
+dist/
+
+# Temporary files
+*.tmp
+*.temp
+
+# Logs
+*.log
+logs/

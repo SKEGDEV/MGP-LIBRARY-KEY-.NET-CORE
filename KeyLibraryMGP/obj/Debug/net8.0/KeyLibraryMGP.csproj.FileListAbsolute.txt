@@ -1,0 +1,11 @@
+C:\Users\skegd\OneDrive\Documents\Workspace\Projects\KeyLibraryMGP\KeyLibraryMGP\obj\Debug\net8.0\KeyLibraryMGP.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\skegd\OneDrive\Documents\Workspace\Projects\KeyLibraryMGP\KeyLibraryMGP\obj\Debug\net8.0\KeyLibraryMGP.AssemblyInfoInputs.cache
+C:\Users\skegd\OneDrive\Documents\Workspace\Projects\KeyLibraryMGP\KeyLibraryMGP\obj\Debug\net8.0\KeyLibraryMGP.AssemblyInfo.cs
+C:\Users\skegd\OneDrive\Documents\Workspace\Projects\KeyLibraryMGP\KeyLibraryMGP\obj\Debug\net8.0\KeyLibraryMGP.csproj.CoreCompileInputs.cache
+C:\Users\skegd\OneDrive\Documents\Workspace\Projects\KeyLibraryMGP\KeyLibraryMGP\bin\Debug\net8.0\KeyLibraryMGP.deps.json
+C:\Users\skegd\OneDrive\Documents\Workspace\Projects\KeyLibraryMGP\KeyLibraryMGP\bin\Debug\net8.0\KeyLibraryMGP.dll
+C:\Users\skegd\OneDrive\Documents\Workspace\Projects\KeyLibraryMGP\KeyLibraryMGP\bin\Debug\net8.0\KeyLibraryMGP.pdb
+C:\Users\skegd\OneDrive\Documents\Workspace\Projects\KeyLibraryMGP\KeyLibraryMGP\obj\Debug\net8.0\KeyLibraryMGP.dll
+C:\Users\skegd\OneDrive\Documents\Workspace\Projects\KeyLibraryMGP\KeyLibraryMGP\obj\Debug\net8.0\refint\KeyLibraryMGP.dll
+C:\Users\skegd\OneDrive\Documents\Workspace\Projects\KeyLibraryMGP\KeyLibraryMGP\obj\Debug\net8.0\KeyLibraryMGP.pdb
+C:\Users\skegd\OneDrive\Documents\Workspace\Projects\KeyLibraryMGP\KeyLibraryMGP\obj\Debug\net8.0\ref\KeyLibraryMGP.dll
