@@ -1,28 +1,29 @@
 ﻿using Microsoft.Win32;
-using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 
 namespace KeyLibraryMGP
 {
-    public class KeyLibrary : CryptoLibrary
+    public class KeyLibrary
     {
+        private CryptoLibrary crypto = null;
+        public KeyLibrary() {
+            crypto = new CryptoLibrary(getKey("publicKey", false), getKey("secretKey", false));
+        }
+
         /// <summary>
-        /// Encript text most used for systems keys as DB conection string, api keys, etc...
+        /// get keys from registry system key of Windows
         /// </summary>
-        /// <param name="EncriptedText">text that can decrypt</param>
-        /// <returns>text plain based in encripted text entry</returns>
-        /// <exception cref="Exception">Thrown if something of the process is wrong</exception>
+        /// <param name="KeyName">The name in registry of the key</param>
+        /// <param name="decryptKey">Indicates if the key should or not decrypted</param>
+        /// <returns>the key from registry in plain text</returns>
+        /// <exception cref="Exception">Thrown if the key can't find in the routes of MGP that's can be on software or software/wow6432Node</exception>
         /// <example>
         /// <code>
-        /// CryptoKey crypto = new CryptoKey();
-        /// string DencryptedKey = crypto.Decrypt("qHRYdTQf4rxaRHydExeNhw==");
-        /// Console.WriteLine(DencryptedKey); // Output: "hello world"
+        /// KeyLibrary keys = new KeyLibrary();
+        /// string key = keys.getKey("test", true);
+        /// Console.WriteLine(key); // Output: "hello world"
         /// </code>
         /// </example>
-        public string getKey(string keyName)
+        public string getKey(string keyName, bool decryptKey=true)
         {
             RegistryKey machineKeys = null;
             string result = string.Empty;
@@ -30,7 +31,7 @@ namespace KeyLibraryMGP
             {
                 machineKeys = Registry.LocalMachine.OpenSubKey(@"SOFTWARE\MGP");
                 result = machineKeys.GetValue(keyName).ToString();
-                return this.Decrypt(result);
+                return decryptKey ? crypto.Decrypt(result) : result;
             }
             catch (Exception)
             {
@@ -38,7 +39,7 @@ namespace KeyLibraryMGP
                 {
                     machineKeys = Registry.LocalMachine.OpenSubKey(@"SOFTWARE\WOW6432Node\MGP");
                     result = machineKeys.GetValue(keyName).ToString();
-                    return this.Decrypt(result);
+                    return decryptKey ? crypto.Decrypt(result) : result;
                 }
                 catch (Exception e) { return $"Error: {e.Message}"; }
             }

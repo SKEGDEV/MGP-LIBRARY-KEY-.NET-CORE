@@ -5,6 +5,12 @@ namespace KeyLibraryMGP
 {
     public class CryptoLibrary
     {
+        public CryptoLibrary(string publicKey, string privateKey) { 
+            this.publicKey = publicKey;
+            this.privateKey = privateKey;
+        }
+        private string publicKey = string.Empty;
+        private string privateKey = string.Empty;
         /// <summary>
         /// Encript text most used for systems keys as DB conection string, api keys, etc...
         /// </summary>
@@ -23,10 +29,8 @@ namespace KeyLibraryMGP
             try
             {
                 string result = string.Empty;
-                string secretKey = "santhosh";
-                string publicKey = "engineer";
                 byte[] secretByte = { };
-                secretByte = System.Text.Encoding.UTF8.GetBytes(secretKey);
+                secretByte = System.Text.Encoding.UTF8.GetBytes(privateKey);
                 byte[] publicByte = { };
                 publicByte = System.Text.Encoding.UTF8.GetBytes(publicKey);
                 byte[] inputByte = System.Text.Encoding.UTF8.GetBytes(TextPlain);
@@ -65,10 +69,8 @@ namespace KeyLibraryMGP
             try
             {
                 string result = string.Empty;
-                string secretKey = "santhosh";
-                string publicKey = "engineer";
                 byte[] secretByte = { };
-                secretByte = System.Text.Encoding.UTF8.GetBytes(secretKey);
+                secretByte = System.Text.Encoding.UTF8.GetBytes(privateKey);
                 byte[] publicByte = { };
                 publicByte = System.Text.Encoding.UTF8.GetBytes(publicKey);
                 byte[] inputByte = new byte[EncriptedText.Replace(" ", "+").Length];
